@@ -1,3 +1,5 @@
+import { MdDelete } from "react-icons/md";
+
 export default function TodoItem({ todo, setTodos }) {
   return (
     <div className={`todo-item ${todo.priority.toLowerCase()}`}>
@@ -19,7 +21,7 @@ export default function TodoItem({ todo, setTodos }) {
           setTodos((prev) => prev.filter((t) => t.id !== todo.id))
         }
       >
-        🗑
+        <MdDelete size={20} />
       </button>
     </div>
   );

@@ -20,76 +20,80 @@ export default function UserForm() {
   };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // store submitted data
-  setSubmittedData(formData);
+    setSubmittedData(formData);
 
-  // clear the form (reset to initial state)
-  setFormData({
-    name: "",
-    email: "",
-    id: "",
-    password: "",
-  });
+    // reset form
+    setFormData({
+      name: "",
+      email: "",
+      id: "",
+      password: "",
+    });
 
-  // optional: reset password visibility
-  setShowPassword(false);
-};
-
+    setShowPassword(false);
+  };
 
   return (
-    <div className="form-container">
-      <h2 className="form-heading">Form Handling & Password Toggle</h2>
+    <div className="form-page">
+      <h2 className="page-title">Form Handling & Password Toggle</h2>
 
-      <form className="form-box" onSubmit={handleSubmit}>
-        {/* Name */}
-        <label>Name</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Enter name"
-        />
-
-        {/* Email */}
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Enter email"
-        />
-
-        {/* ID */}
-        <label>ID</label>
-        <input
-          type="text"
-          name="id"
-          value={formData.id}
-          onChange={handleChange}
-          placeholder="Enter ID"
-        />
-
-        {/* Password */}
-        <label>Password</label>
-        <div className="password-wrapper">
+      <form className="form-card" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label>Name</label>
           <input
-            type={showPassword ? "text" : "password"}
-            name="password"
-            value={formData.password}
+            type="text"
+            name="name"
+            value={formData.name}
             onChange={handleChange}
-            placeholder="Enter password"
+            placeholder="Enter name"
+            required
           />
-          <button
-            type="button"
-            className="toggle-btn"
-            onClick={() => setShowPassword(!showPassword)}
-          >
-            {showPassword ? "Hide" : "Show"}
-          </button>
+        </div>
+
+        <div className="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter email"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>ID</label>
+          <input
+            type="text"
+            name="id"
+            value={formData.id}
+            onChange={handleChange}
+            placeholder="Enter ID"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Password</label>
+          <div className="password-wrapper">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Enter password"
+              required
+            />
+            <span
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? "hide" : "show"}
+            </span>
+          </div>
         </div>
 
         <button type="submit" className="submit-btn">
@@ -97,9 +101,8 @@ export default function UserForm() {
         </button>
       </form>
 
-      {/* Submitted Data */}
       {submittedData && (
-        <div className="submitted-box">
+        <div className="submitted-card">
           <h3>Submitted Data:</h3>
           <p><strong>Name:</strong> {submittedData.name}</p>
           <p><strong>Email:</strong> {submittedData.email}</p>
