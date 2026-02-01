@@ -1,70 +1,155 @@
-# Getting Started with Create React App
+ *** React Task Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modular React application demonstrating multiple UI and state-management tasks such as Todo List, Advanced Countdown Timer, Search with Highlight & Result Count, Form Handling with Password Toggle, and Dynamic Progress Bar.
+This project focuses on clean UI, reusable components, and readable, maintainable code.
 
-## Available Scripts
+ *** Steps to Run the Project Locally
+ *** Prerequisites
 
-In the project directory, you can run:
+Make sure you have the following installed on your system:
 
-### `npm start`
+Node.js: v18.x or later (recommended)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm: v9.x or later (comes with Node.js)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To check versions:
 
-### `npm test`
+node -v
+npm -v
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+***  Installation Steps
 
-### `npm run build`
+Clone the repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone <https://github.com/umaGannamani/react-intern-assignment.git>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Navigate into the project folder
 
-### `npm run eject`
+cd react-task-dashboard
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*** Start the Project
 
-## Learn More
+Run the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+The app will be available at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+http://localhost:3000
 
-### Analyzing the Bundle Size
+*** Assumptions Made
+*** Design Decisions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Used functional components with React Hooks (useState, useEffect, useRef) for modern React practices.
 
-### Making a Progressive Web App
+Centralized styling in index.css for consistency and easier maintenance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Used responsive CSS (media queries) to ensure mobile compatibility.
 
-### Advanced Configuration
+UI components are designed to be independent and reusable.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Countdown Timer state is persisted using localStorage to survive page refreshes.
 
-### Deployment
+***  Libraries Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+react-icons for consistent, scalable icons (play, pause, reset, delete).
 
-### `npm run build` fails to minify
+No UI framework (like MUI or Bootstrap) to demonstrate pure CSS skills.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*** Limitations / Trade-offs
+
+No backend integration (data is managed locally or via localStorage).
+
+No global state management (Redux/Zustand) since the app scope is limited.
+
+Accessibility improvements (ARIA roles) can be enhanced further.
+
+Error handling is minimal as this is a UI-focused task.
+
+*** Code Quality Expectations (How This Project Meets Them)
+*** Modularity
+
+Each feature is broken into separate components:
+
+TodoItem
+
+CountdownTimer
+
+Search
+
+Form
+
+MultiProgressBar
+
+Components are single-responsibility focused.
+
+Logic is separated from UI wherever possible.
+
+*** Readability
+
+Clean, consistent formatting across all files.
+
+Logical grouping of hooks, handlers, and JSX.
+
+Inline comments added where logic may not be obvious.
+
+Consistent indentation and spacing.
+
+*** Proper Naming
+
+Descriptive variable names (timeLeft, initialTime, status)
+
+Meaningful function names (start, pause, resume, reset)
+
+Component names reflect responsibility (CountdownTimer, TodoItem)
+
+CSS class names follow a readable structure (timer-display, todo-item, form-card)
+
+*** Responsive Design
+
+Mobile-specific fixes applied using media queries.
+
+Countdown timer font scales properly on small screens.
+
+Buttons stack vertically on mobile where required.
+
+Scrollbars applied only where necessary (e.g., search result list).
+
+*** Tech Stack
+
+React.js
+
+JavaScript (ES6+)
+
+CSS3
+
+React Icons
+
+LocalStorage API
+
+*** Live URL Link
+https://react-intern-assignment-chi.vercel.app/
+
+*** Git Repo
+https://github.com/umaGannamani/react-intern-assignment.git
+
+*** Summary
+
+This project demonstrates:
+
+Strong understanding of React fundamentals
+
+Clean component architecture
+
+Thoughtful UI/UX decisions
+
+Responsive design handling
+
+Maintainable and readable codebase
