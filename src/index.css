@@ -333,6 +333,19 @@ body {
   color: #1f2937;
   letter-spacing: 2px;
 }
+/* -------- Mobile Responsive Fix -------- */
+@media (max-width: 480px) {
+  .timer-display {
+    font-size: 1.6rem;     /* reduced from desktop */
+    letter-spacing: 1px;  /* tighter spacing */
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
+
 
 .timer-status {
   font-size: 20px;
