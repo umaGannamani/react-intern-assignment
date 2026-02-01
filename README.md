@@ -4,6 +4,7 @@ A modular React application demonstrating multiple UI and state-management tasks
 This project focuses on clean UI, reusable components, and readable, maintainable code.
 
  *** Steps to Run the Project Locally
+ 
  *** Prerequisites
 
 Make sure you have the following installed on your system:
@@ -45,6 +46,7 @@ The app will be available at:
 http://localhost:3000
 
 *** Assumptions Made
+
 *** Design Decisions
 
 Used functional components with React Hooks (useState, useEffect, useRef) for modern React practices.
@@ -74,6 +76,7 @@ Accessibility improvements (ARIA roles) can be enhanced further.
 Error handling is minimal as this is a UI-focused task.
 
 *** Code Quality Expectations (How This Project Meets Them)
+
 *** Modularity
 
 Each feature is broken into separate components:
@@ -135,9 +138,11 @@ React Icons
 LocalStorage API
 
 *** Live URL Link
+
 https://react-intern-assignment-chi.vercel.app/
 
 *** Git Repo
+
 https://github.com/umaGannamani/react-intern-assignment.git
 
 *** Summary
